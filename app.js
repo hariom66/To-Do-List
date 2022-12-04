@@ -13,11 +13,7 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 //const uri = "mongodb+srv://hariomAtlas:4oerdOKrEYVbLpqx@atlascluster.d2vjeob.mongodb.net/";
 //const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
-//mongoose.connect("mongodb+srv://hariomAtlas:4oerdOKrEYVbLpqx@atlascluster.d2vjeob.mongodb.net/todolistDB", {useNewUrlParser: true});
-mongoose.connect("mongodb://localhost:27017/todolistDB", {useNewUrlParser: true});
-const itemsSchema = {
-  name: String
-};
+mongoose.connect("mongodb://hariomjmd:qwertyuiop@ac-ummpqf5-shard-00-00.uka8h8a.mongodb.net:27017,ac-ummpqf5-shard-00-01.uka8h8a.mongodb.net:27017,ac-ummpqf5-shard-00-02.uka8h8a.mongodb.net:27017/?ssl=true&replicaSet=atlas-11iqdi-shard-0&authSource=admin&retryWrites=true&w=majority", {useNewUrlParser: true});
 
 const Item = mongoose.model("Item", itemsSchema);
 
