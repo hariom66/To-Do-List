@@ -15,6 +15,10 @@ app.use(express.static("public"));
 //const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true, serverApi: ServerApiVersion.v1 });
 mongoose.connect("mongodb://hariomjmd:qwertyuiop@ac-ummpqf5-shard-00-00.uka8h8a.mongodb.net:27017,ac-ummpqf5-shard-00-01.uka8h8a.mongodb.net:27017,ac-ummpqf5-shard-00-02.uka8h8a.mongodb.net:27017/?ssl=true&replicaSet=atlas-11iqdi-shard-0&authSource=admin&retryWrites=true&w=majority", {useNewUrlParser: true});
 
+const itemsSchema = {
+  name: String
+};
+
 const Item = mongoose.model("Item", itemsSchema);
 
 
